@@ -4,7 +4,7 @@ import 'scrollox/dist/index.css'
 
 import { useScrollHook } from 'scrollox'
 
-const arr = Array.from({ length: 200 })
+const arr = Array.from({ length: 2000 })
 
 const App = () => {
 
