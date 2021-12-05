@@ -1,10 +1,23 @@
 import React from 'react'
 
-import { ExampleComponent } from 'scrollox'
 import 'scrollox/dist/index.css'
 
+import { useScrollHook } from 'scrollox'
+
+const arr = Array.from({ length: 200 })
+
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+
+  const [newData, page] = useScrollHook(arr, 30)
+
+  console.log(`newData`, newData)
+
+  return <>
+    {newData.map((i: any, ind: number) => (
+      <h1>{i} {ind} - {page}</h1>
+    ))}
+
+  </>
 }
 
 export default App
