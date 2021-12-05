@@ -4,7 +4,7 @@
   "description": "scrollox",
   "author": "zekiko",
   "license": "MIT",
-  "repository": "zekiko/scrollox",
+  "repository": "https://github.com/zekiko/scrollox.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
