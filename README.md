@@ -1,4 +1,4 @@
-# scrollox
+# Scrollox
 
 > scrollox
 
@@ -13,16 +13,25 @@ npm install --save scrollox
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'scrollox'
-import 'scrollox/dist/index.css'
+import { useScrollHook } from 'scrollox'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const bigData = Array.from({ length: 20000 })
+
+const App = () => {
+
+  const [newData, page] = useScrollHook(bigData, 30)
+
+  return 
+    <>
+      {newData.map((i, index) => (
+        <h1>{index} - {page}</h1>
+      ))}
+    </>
 }
+
+export default App
 ```
 
 ## License
