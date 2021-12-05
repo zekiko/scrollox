@@ -10,8 +10,6 @@ const App = () => {
 
   const [newData, page] = useScrollHook(arr, 30)
 
-  console.log(`newData`, newData)
-
   return <>
     {newData.map((i: any, ind: number) => (
       <h1>{i} {ind} - {page}</h1>

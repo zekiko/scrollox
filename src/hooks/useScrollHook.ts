@@ -12,7 +12,6 @@ export function useScrollHook(data: any, slice: any): any {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement
 
     if (scrollTop + clientHeight >= scrollHeight - 5) {
-      console.log('girdi', scrollTop, scrollHeight, clientHeight)
       setPage((page) => page + 1)
     }
   }
