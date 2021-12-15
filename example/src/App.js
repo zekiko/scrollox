@@ -1,14 +1,11 @@
 import React from 'react'
-
-import 'scrollox/dist/index.css'
-
 import { useInfiniteScroll } from 'scrollox'
 
-const arr = Array.from({ length: 300 })
+const initial_data = Array.from({ length: 300 })
 
 const App = () => {
   const scrollRef = React.useRef()
-  const [newData, page] = useInfiniteScroll(arr, 30, scrollRef)
+  const [newData, page] = useInfiniteScroll(initial_data, 30, scrollRef)
   return (
     <div
       ref={scrollRef}
