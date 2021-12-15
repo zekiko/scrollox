@@ -1,1 +1,1 @@
-export * from './hooks/useScrollHook'
+export * from './hooks/useInfiniteScroll'
